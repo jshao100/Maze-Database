@@ -59,12 +59,50 @@ function createMaze(scale, w, h) {
 }
 
 function drawMaze() {
+	var start = null;
+	var end = null;
+
 	$(".maze-cell").click(function() {
-		//var check = $(event.target).css();
-		if (!("white").localeCompare((event.target).style.backgroundColor)) {
-			$(event.target).css("background-color","black");
-		} else if (!("black").localeCompare((event.target).style.backgroundColor)) { 
-			$(event.target).css("background-color","white");
+		if (event.shiftKey) {
+			if (!("green").localeCompare((event.target).style.backgroundColor)) {
+				$(event.target).css("background-color","white");
+				start = null;
+			} else if (!("red").localeCompare((event.target).style.backgroundColor)) {
+				$(event.target).css("background-color","white");
+				end = null;
+			} else if (start == null) {
+				$(event.target).css("background-color","green");
+				start = $(event.target);	
+			} else if (start != null && end == null) {
+				$(event.target).css("background-color","red");
+				end = $(event.target);
+			} else if (start != null && end != null) {
+				alert("Please unset either the start or end.");
+			}
+			/*
+			if (!("white").localeCompare((event.target).style.backgroundColor) || 
+				!("black").localeCompare((event.target).style.backgroundColor)) {
+
+				if (start != null) {
+					$(start).css("background-color","white");
+				}
+
+				$(event.target).css("background-color","green");
+				start = $(event.target);	
+			} else if (!("green").localeCompare((event.target).style.backgroundColor)) { 
+				$(event.target).css("background-color","red");
+			} else if (!("red").localeCompare((event.target).style.backgroundColor)) { 
+				$(event.target).css("background-color","white");
+			}
+			*/
+		} else {
+			//var check = $(event.target).css();
+			if (!("white").localeCompare((event.target).style.backgroundColor)) {
+				$(event.target).css("background-color","black");
+			} else {
+				//else if (!("black").localeCompare((event.target).style.backgroundColor)) { 
+				$(event.target).css("background-color","white");
+			}
 		}
 	});
 }
