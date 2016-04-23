@@ -25,6 +25,8 @@ $('#create-maze').click(function() {
 		else						scale_factor = 600/width;
 	
 		createMaze(scale_factor, width, height);
+
+		drawMaze();
 	}
 	
 });
@@ -51,6 +53,18 @@ function createMaze(scale, w, h) {
 	$(".maze-row").css("height",scale);
 	$(".maze-cell").css("height",scale);
 	$(".maze-cell").css("width",scale);
+	$(".maze-cell").css("background-color","white");
 
 	return;	
+}
+
+function drawMaze() {
+	$(".maze-cell").click(function() {
+		//var check = $(event.target).css();
+		if (!("white").localeCompare((event.target).style.backgroundColor)) {
+			$(event.target).css("background-color","black");
+		} else if (!("black").localeCompare((event.target).style.backgroundColor)) { 
+			$(event.target).css("background-color","white");
+		}
+	});
 }
