@@ -1,4 +1,5 @@
 .contain-to-grid {
+	z-index: 100;
 	width: 100%;	
 	position:fixed;
 }
@@ -12,7 +13,6 @@
 }
 
 .footer {
-	position: fixed;
 	bottom: 0;
 	height: 100px;
 	width: 100%;
@@ -24,7 +24,7 @@
 
 .main {
 	padding-top: 100px;
-	padding-bottom: 50px;
+	margin-bottom: 125px;
 }
 
 .main .title {
@@ -41,4 +41,17 @@
 
 .main .search-button .button{
 	width: 100%;
+}
+
+.main .switch .switch-paddle {
+	background-color: #2199e8;
+	width: 6rem;
+}
+
+.main .switch .switch-paddle .switch-inactive {
+	right: 8%;
+}
+
+.main .switch input:checked ~ .switch-paddle::after {
+	left: 3.75rem;
 }
