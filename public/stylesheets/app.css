@@ -55,3 +55,26 @@
 .main .switch input:checked ~ .switch-paddle::after {
 	left: 3.75rem;
 }
+
+.main .slider {
+	background-color: green;
+}
+
+.main .search-options .slider-label {
+	padding-top: 5px;
+}
+
+.main .search-options .slider-label p {
+	font-size: 20px;	
+}
+
+.main .search-options .span-label {
+	position: relative;
+}
+
+.main .search-options .span-label span{
+	position: absolute;
+	font-size: 12px;
+	top: 22%;
+	left: 36%;
+}
