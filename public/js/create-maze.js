@@ -99,7 +99,7 @@ function drawMaze() {
 			//var check = $(event.target).css();
 			if (!("white").localeCompare((event.target).style.backgroundColor)) {
 				$(event.target).css("background-color","black");
-			} else {
+			} else if (!("black").localeCompare((event.target).style.backgroundColor)) {
 				//else if (!("black").localeCompare((event.target).style.backgroundColor)) { 
 				$(event.target).css("background-color","white");
 			}
