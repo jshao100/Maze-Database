@@ -1,0 +1,44 @@
+.contain-to-grid {
+	width: 100%;	
+	position:fixed;
+}
+
+.top-bar {
+	background-color: #d6d8dd;
+}
+
+.top-bar ul {
+	background-color: transparent;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	height: 100px;
+	width: 100%;
+}
+
+.footer .right-footer li {
+	float:right;
+}
+
+.main {
+	padding-top: 100px;
+	padding-bottom: 50px;
+}
+
+.main .title {
+	padding-bottom: 25px;
+}
+
+.main h2 {
+	text-align: center;
+}
+
+.no-padding {
+	padding: 0;
+}
+
+.main .search-button .button{
+	width: 100%;
+}
