@@ -1,0 +1,25 @@
+.maze-dimension {
+	position:relative;
+}
+
+.maze-dimension p {
+	position: absolute;
+	left: 112px;
+	top: 5px;
+}
+
+.maze-dimension input {
+	width: 100px;
+	margin-right: 30px;
+}
+
+.maze {
+	//border: 1px solid black;
+	//width: 600px;
+	//height: 600px;
+}
+
+.maze-cell {
+	border: 1px solid grey;
+	display: inline-block;
+}

@@ -7,6 +7,7 @@
 
 		<link rel="stylesheet" href="./stylesheets/foundation.css"/>
 		<link rel="stylesheet" href="./stylesheets/app.css"/>
+		<link rel="stylesheet" href="./stylesheets/maze.css"/>
 	</head>
 	<body>
 		<section class="contain-to-grid sticky">
@@ -31,6 +32,19 @@
 		</section>
 
 		<section class="main">
+			<div class="medium-4 medium-centered column">
+				<form>
+					<div class="row maze-dimension">
+						<input id="width" class="medium-4 column" type="text" placeholder="Width" value="15"/>
+						<p>x</p>
+						<input id="height" class="medium-4 column" type="text" placeholder="Height" value = "15"/>
+						<a id="create-maze" class="medium-4 column button">Create</a>
+					</div>
+				</form>
+			</div>
+			<div class="row">
+				<div class="maze medium-centered"></div>
+			</div>
 		</section>
 
 		<section class="footer">
@@ -51,6 +65,7 @@
 		</section>
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 		<script src="./js/vendor/foundation.min.js"></script>
+		<script src="./js/create-maze.js"></script>
 		<script>
 			$(document).foundation();
 		</script>
