@@ -7,7 +7,7 @@
 // This application uses express as its web server
 // for more info, see: http://expressjs.com
 var express = require('express');
-
+var mysql = require('mysql');
 var fs = require('fs');
 
 // cfenv provides access to your Cloud Foundry environment
@@ -33,7 +33,7 @@ app.post('/save', function (req, res) {
 
 	var rows = $('.maze').children('.maze-row').each(function() {});
 	var cols;
-	
+
 	var i;
 	var j;
 	var str;
@@ -57,5 +57,27 @@ app.listen(appEnv.port, '0.0.0.0', function() {
 
 	// print a message when the server starts listening
 	console.log("server starting on " + appEnv.url);
+	console.log("hello bitches");
+	var connection = mysql.createConnection({
+		host: 'ip-10-169-56-175',
+		user: 'b9a1b6108596e9',
+		password: 'cedf8312',
+		database: 'ad_e15d55d16dfba74'
+	}); 
+	console.log("one");
+	connection.connect()(function(err) {
+		if(err)
+			console.log('err');
+		else
+			console.log('worked');
+	}); 
+	console.log("two");
+	connection.query('show tables', function(err,rows,fields) {
+		if(!err) 
+			console.log('There are ', rows);
+		else
+			console.log('Error while performing Query.');
+	}); 
+	connection.end();
 });
 
