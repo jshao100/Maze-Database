@@ -58,6 +58,16 @@ app.listen(appEnv.port, '0.0.0.0', function() {
 	// print a message when the server starts listening
 	console.log("server starting on " + appEnv.url);
 	console.log("hello bitches");
+//	var pool = mysql.createPool({
+//		connectionLimit : 5,
+//		host : 'us-cdbr-iron-east-03.cleardb.net',
+//		user: 'b9a1b6108596e9',
+//		password: 'cedf8312',
+//		database: 'ad_e15d55d16dfba74'
+//	});
+//	pool.getConnection(function(err, connection) {
+		
+
 	var connection = mysql.createConnection({
 		host: 'us-cdbr-iron-east-03.cleardb.net',
 		user: 'b9a1b6108596e9',
@@ -70,6 +80,8 @@ app.listen(appEnv.port, '0.0.0.0', function() {
 			console.log('There are ', rows);
 		else
 			console.log('Error while performing Query.');
+		connection.end();
+
 	});
 	console.log("gonna end");
 	connection.end();
