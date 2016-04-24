@@ -64,15 +64,15 @@ app.listen(appEnv.port, '0.0.0.0', function() {
 		password: 'cedf8312',
 		database: 'ad_e15d55d16dfba74'
 	}); 
-	console.log("one");
 	connection.connect();
-	console.log("two");
 	connection.query('show tables', function(err,rows,fields) {
 		if(!err) 
 			console.log('There are ', rows);
 		else
 			console.log('Error while performing Query.');
 	}); 
+	console.log("gonna end");
 	connection.end();
+	console.log("done");
 });
 
