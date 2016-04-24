@@ -8,6 +8,12 @@
 // for more info, see: http://expressjs.com
 var express = require('express');
 
+var fs = require('fs');
+fs.writeFile('testnodejs.txt', 'Hello World!', function (err) {
+	if (err) return console.log(err);
+	console.log('Hello World > helloworld.txt');
+});
+
 // cfenv provides access to your Cloud Foundry environment
 // for more info, see: https://www.npmjs.com/package/cfenv
 var cfenv = require('cfenv');
@@ -25,5 +31,5 @@ var appEnv = cfenv.getAppEnv();
 app.listen(appEnv.port, '0.0.0.0', function() {
 
 	// print a message when the server starts listening
-  console.log("server starting on " + appEnv.url);
+	console.log("server starting on " + appEnv.url);
 });

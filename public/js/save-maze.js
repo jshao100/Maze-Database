@@ -1,4 +1,4 @@
-var fs = require("fs");
+//var fs = require("fs");
 
 $('#save-maze').click(function() {
 	var fileName = "../mazes/test.txt";
