@@ -70,9 +70,10 @@ app.listen(appEnv.port, '0.0.0.0', function() {
 			console.log('There are ', rows);
 		else
 			console.log('Error while performing Query.');
-	}); 
+	});
 	console.log("gonna end");
-	connection.end();
+	connection.close();
+	//connection.end();
 	console.log("done");
 });
 
