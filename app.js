@@ -65,12 +65,7 @@ app.listen(appEnv.port, '0.0.0.0', function() {
 		database: 'ad_e15d55d16dfba74'
 	}); 
 	console.log("one");
-	connection.connect()(function(err) {
-		if(err)
-			console.log('err');
-		else
-			console.log('worked');
-	}); 
+	connection.connect();
 	console.log("two");
 	connection.query('show tables', function(err,rows,fields) {
 		if(!err) 
