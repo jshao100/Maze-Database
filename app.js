@@ -9,9 +9,6 @@
 var express = require('express');
 
 var fs = require('fs');
-app.post('/save', function (req, res) {
-	console.log('WORKS WOOT');
-});
 
 // cfenv provides access to your Cloud Foundry environment
 // for more info, see: https://www.npmjs.com/package/cfenv
@@ -31,4 +28,9 @@ app.listen(appEnv.port, '0.0.0.0', function() {
 
 	// print a message when the server starts listening
 	console.log("server starting on " + appEnv.url);
+});
+
+
+app.post('/save', function (req, res) {
+	console.log('WORKS WOOT');
 });
