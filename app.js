@@ -8,6 +8,7 @@
 // for more info, see: http://expressjs.com
 var express = require('express');
 
+var $ = require('jQuery');
 var fs = require('fs');
 
 // cfenv provides access to your Cloud Foundry environment
