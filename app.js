@@ -59,8 +59,7 @@ app.listen(appEnv.port, '0.0.0.0', function() {
 	console.log("server starting on " + appEnv.url);
 	console.log("hello bitches");
 	var connection = mysql.createConnection({
-		port: '3306',
-		host: 'ip-10-169-56-175',
+		host: 'us-cdbr-iron-east-03.cleardb.net',
 		user: 'b9a1b6108596e9',
 		password: 'cedf8312',
 		database: 'ad_e15d55d16dfba74'
