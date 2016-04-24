@@ -72,9 +72,10 @@ app.listen(appEnv.port, '0.0.0.0', function() {
 			console.log('Error while performing Query.');
 	});
 	console.log("gonna end");
-	connection.end(function(err) {
-		console.log("error is: ", err);
-	});
+	connection.end();
+	//connection.end(function(err) {
+	//	console.log('error is: ', err);
+	//});
 	console.log("done");
 });
 
