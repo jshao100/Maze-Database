@@ -23,3 +23,9 @@
 	border: 1px solid grey;
 	display: inline-block;
 }
+
+.save-button a {
+	display: none;
+	width: 100%;	
+	margin-top: 25px;
+}

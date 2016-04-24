@@ -26,6 +26,8 @@ $('#create-maze').click(function() {
 	
 		createMaze(scale_factor, width, height);
 
+		alert("Click to draw walls and spaces,\nShift+Click to draw start and stop squares");
+
 		drawMaze();
 	}
 	
@@ -41,6 +43,7 @@ function createMaze(scale, w, h) {
 	
 	$(".maze").css("width",(scale*w)+2);
 	$(".maze").css("border","solid 1px black");
+	$(".save-button").children("div").children("a").css("display","block");
 
 	var i;
 	for(i = 0; i < h; i++) {
