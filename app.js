@@ -9,9 +9,8 @@
 var express = require('express');
 
 var fs = require('fs');
-fs.writeFile('testnodejs.txt', 'Hello World!', function (err) {
-	if (err) return console.log(err);
-	console.log('Hello World > helloworld.txt');
+app.post('/save', function (req, res) {
+	console.log('WORKS WOOT');
 });
 
 // cfenv provides access to your Cloud Foundry environment
