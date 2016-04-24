@@ -84,7 +84,6 @@ app.listen(appEnv.port, '0.0.0.0', function() {
 
 	});
 	console.log("gonna end");
-	connection.end();
 	//connection.end(function(err) {
 	//	console.log('error is: ', err);
 	//});
