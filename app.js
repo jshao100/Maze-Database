@@ -77,7 +77,7 @@ app.listen(appEnv.port, '0.0.0.0', function() {
 	connection.connect();
 	connection.query('show tables', function(err,rows,fields) {
 		if(!err) 
-			console.log('There are ', rows);
+			console.log('There are ', rows[0]);
 		else
 			console.log('Error while performing Query.');
 
