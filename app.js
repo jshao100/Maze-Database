@@ -80,7 +80,6 @@ app.listen(appEnv.port, '0.0.0.0', function() {
 			console.log('There are ', rows);
 		else
 			console.log('Error while performing Query.');
-		connection.end();
 
 	});
 	console.log("gonna end");
